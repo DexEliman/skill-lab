@@ -1,5 +1,6 @@
 // FIRSTPAGE HOME PAGE
 import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
           <span style={stylesHome.darkBlue}>Lab</span>
         </h1>
       </div>
+      
       <div style={stylesHome.container}>
         <h2 style={stylesHome.greetings}>
           Bienvenue
