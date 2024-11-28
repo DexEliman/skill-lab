@@ -1,6 +1,7 @@
 // FIRSTPAGE HOME PAGE
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import Link from 'next/link'
 
 export default function Home() {
   return (
@@ -31,11 +32,16 @@ export default function Home() {
 
           <Button style={stylesHome.button}>Inscription</Button>
         </div>
-
-
-
-
-
+      </div>
+      <div style={stylesHome.container}>
+          <p>Y'a pas d'authetification pour le moment entre tkt ;-;
+          
+          <Link href="/dashboard">
+              <Button style={stylesHome.button}>
+                FREE ENTERY
+              </Button>
+          </Link>
+          </p>
       </div>
 
     </>
@@ -61,6 +67,7 @@ const stylesHome = {
   },
   phrases: {
     fontSize: '48px',
+    color: 'white',
   },
   lightBlue: {
     color: 'lightblue',
