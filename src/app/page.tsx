@@ -1,6 +1,5 @@
-// FIRSTPAGE HOME PAGE
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -17,30 +16,25 @@ export default function Home() {
           Bienvenue
         </h2>
       </div>
+      
       <div style={stylesHome.container}>
-
         <div>
-          <p style={stylesHome.phrases}>Content de revoir !!!</p>
-          <Button style={stylesHome.button}>Connection</Button>
+          <p style={stylesHome.phrases}>Content de te revoir !!!</p>
+          <Link href="/login"> {/* Bouton Connexion redirige vers /login */}
+            <Button style={stylesHome.button}>Connexion</Button>
+          </Link>
         </div>
-
 
         <hr style={stylesHome.ligne} />
+        
         <div>
-          <p style={stylesHome.phrases}>C'est ta premiére fois ? <br /> Insctit-Toi!!</p>
-
-          <Button style={stylesHome.button}>Inscription</Button>
+          <p style={stylesHome.phrases}>C'est ta première fois ? <br /> Inscris-toi !</p>
+          <Link href="/signup"> {/* Bouton Inscription redirige vers /signup */}
+            <Button style={stylesHome.button}>Inscription</Button>
+          </Link>
         </div>
-
-
-
-
-
       </div>
-
     </>
-
-
   );
 }
 
@@ -50,8 +44,6 @@ const stylesHome = {
     padding: '20px',
     alignItems: 'center',
     justifyContent: 'center'
-    
-
   },
   title: {
     fontSize: '144px',
@@ -68,17 +60,6 @@ const stylesHome = {
   darkBlue: {
     color: 'darkblue',
   },
-  cardContainer: {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginTop: '20px',
-  },
-  card: {
-    padding: '20px',
-    border: '1px solid #ccc',
-    margin: '0 10px',
-  },
   ligne: {
     width: '2px',
     backgroundColor: '#ccc',
@@ -91,7 +72,7 @@ const stylesHome = {
     fontSize: '18px',
     backgroundColor: 'blue',
     color: 'white',
-    border: 'black',
+    border: 'none',
     borderRadius: '5px',
     transition: 'background-color 0.3s ease',
   },
