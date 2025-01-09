@@ -20,6 +20,7 @@ model User {
   createdAt DateTime @default(now())
 }
 
+
 model Skill {
   id        Int      @id @default(autoincrement())
   name     String
