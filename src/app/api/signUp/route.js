@@ -1,14 +1,15 @@
 import { PrismaClient } from '@prisma/client';
+import bcrypt from 'bcrypt';
 
 const prisma = new PrismaClient();
 
 export async function POST(req) {
   try {
-    const { name, email } = await req.json();
+    const { name, email, password } = await req.json();
 
-    // Validation des champs
-    if (!name || !email) {
-      return new Response(JSON.stringify({ error: "Name and email are required" }), { status: 400 });
+    // Vérification des champs requis
+    if (!name || !email || !password) {
+      return new Response(JSON.stringify({ error: "Name, email, and password are required" }), { status: 400 });
     }
 
     // Vérifier si l'email existe déjà
@@ -20,11 +21,15 @@ export async function POST(req) {
       return new Response(JSON.stringify({ error: "Email already exists" }), { status: 400 });
     }
 
-    // Créer l'utilisateur
+    // Hachage du mot de passe
+    const hashedPassword = await bcrypt.hash(password, 10);
+
+    // Créer un nouvel utilisateur
     const newUser = await prisma.user.create({
       data: {
         name,
         email,
+        password: hashedPassword, // Enregistrer le mot de passe haché
       },
     });
 

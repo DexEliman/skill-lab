@@ -5,6 +5,7 @@ import { useState } from "react";
 export default function SignupPage() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [password, setPassword] = useState(""); // Ajout du champ mot de passe
   const [message, setMessage] = useState("");
 
   const handleSignup = async (e) => {
@@ -16,7 +17,7 @@ export default function SignupPage() {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ name, email }),
+        body: JSON.stringify({ name, email, password }), // Envoi du mot de passe
       });
 
       if (response.ok) {
@@ -54,6 +55,16 @@ export default function SignupPage() {
               placeholder="Entrez votre e-mail"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
+            />
+          </div>
+          <div>
+            <label className="block mb-2 text-sm font-medium text-gray-600">Mot de Passe</label>
+            <input
+              type="password"
+              className="w-full px-4 py-2 border border-gray-300 rounded-md"
+              placeholder="Entrez votre mot de passe"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)} // Mise à jour du mot de passe
             />
           </div>
           <div>
