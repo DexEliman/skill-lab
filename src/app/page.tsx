@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { collectRoutesUsingEdgeRuntime } from "next/dist/build/utils";
 import Link from 'next/link';
 
 export default function Home() {
@@ -53,6 +54,7 @@ const stylesHome = {
   },
   phrases: {
     fontSize: '48px',
+    color: 'white',
   },
   lightBlue: {
     color: 'lightblue',
