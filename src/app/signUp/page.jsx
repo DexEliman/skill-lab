@@ -28,7 +28,8 @@ export default function SignupPage() {
         setMessage(`Error: ${errorData.error}`);
       }
     } catch (error) {
-      setMessage(`Error: ${error.message}`);
+      console.error(error.message);  
+      res.status(500).json({ error: 'Error saving user to database' });
     }
   };
 

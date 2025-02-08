@@ -16,9 +16,10 @@ model User {
   id        Int      @id @default(autoincrement())
   email     String   @unique
   name      String
-  password  String
+  password  String   
   createdAt DateTime @default(now())
 }
+
 
 model Skill {
   id        Int      @id @default(autoincrement())
