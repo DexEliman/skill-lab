@@ -11,13 +11,13 @@ export default function Home() {
           <span style={stylesHome.darkBlue}>Lab</span>
         </h1>
       </div>
-      
+
       <div style={stylesHome.container}>
         <h2 style={stylesHome.greetings}>
           Bienvenue
         </h2>
       </div>
-      
+
       <div style={stylesHome.container}>
         <div>
           <p style={stylesHome.phrases}>Content de te revoir !!!</p>
@@ -27,14 +27,21 @@ export default function Home() {
         </div>
 
         <hr style={stylesHome.ligne} />
-        
+
         <div>
           <p style={stylesHome.phrases}>C'est ta première fois ? <br /> Inscris-toi !</p>
           <Link href="/signup"> {/* Bouton Inscription redirige vers /signup */}
             <Button style={stylesHome.button}>Inscription</Button>
           </Link>
         </div>
+
       </div>
+      <div style={stylesHome.container}>
+          <p style={stylesHome.phrases} >Tkt ya pas d' Authentification   </p>
+          <Link href="/dashboard"> 
+            <Button style={stylesHome.button}>Entre</Button>
+          </Link>
+        </div>
     </>
   );
 }
