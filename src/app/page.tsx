@@ -1,6 +1,10 @@
 import { Button } from "@/components/ui/button";
+<<<<<<< HEAD
 import { collectRoutesUsingEdgeRuntime } from "next/dist/build/utils";
 import Link from 'next/link';
+=======
+import { Card } from "@/components/ui/card";
+>>>>>>> parent of cfd3a68 (hum)
 
 export default function Home() {
   return (
@@ -35,6 +39,7 @@ export default function Home() {
           </Link>
         </div>
 
+<<<<<<< HEAD
       </div>
       <div style={stylesHome.container}>
           <p style={stylesHome.phrases} >Tkt ya pas d' Authentification   </p>
@@ -42,6 +47,14 @@ export default function Home() {
             <Button style={stylesHome.button}>Entre</Button>
           </Link>
         </div>
+=======
+
+
+
+
+      </div>
+
+>>>>>>> parent of cfd3a68 (hum)
     </>
   );
 }
@@ -61,7 +74,6 @@ const stylesHome = {
   },
   phrases: {
     fontSize: '48px',
-    color: 'white',
   },
   lightBlue: {
     color: 'lightblue',

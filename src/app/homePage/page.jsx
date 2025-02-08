@@ -1,6 +1,11 @@
 import { Button } from "@/components/ui/button";
+<<<<<<< HEAD:src/app/dashboard/page.tsx
 import { collectRoutesUsingEdgeRuntime } from "next/dist/build/utils";
 import Link from 'next/link';
+=======
+
+
+>>>>>>> parent of cfd3a68 (hum):src/app/homePage/page.jsx
 export default function Home() {
   return (
     <div style={stylesHome.container}>

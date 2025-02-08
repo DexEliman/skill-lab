@@ -14,10 +14,14 @@ generator client {
 
 model User {
   id        Int      @id @default(autoincrement())
+  createdAt DateTime @default(now())
   email     String   @unique
   name      String
+<<<<<<< HEAD
   password  String   
   createdAt DateTime @default(now())
+=======
+>>>>>>> parent of cfd3a68 (hum)
 }
 
 

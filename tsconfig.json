@@ -22,6 +22,10 @@
       "@/*": ["./src/*"]
     }
   },
+<<<<<<< HEAD
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/login/page.jsx", "src/app/dashboard/page.jsx", "src/app/layout.jsx"],
+=======
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/login/page.jsx", "src/app/homePage/page.jsx"],
+>>>>>>> parent of cfd3a68 (hum)
   "exclude": ["node_modules"]
 }
